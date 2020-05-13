@@ -20,6 +20,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bgimage.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="ywi-4f-lUx">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="lobby.png" translatesAutoresizingMaskIntoConstraints="NO" id="XEI-cw-3cS">
                                 <rect key="frame" x="0.0" y="95" width="414" height="310"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -85,25 +89,21 @@
         <!--Battle View Controller-->
         <scene sceneID="wHU-Pg-wDA">
             <objects>
-                <viewController id="hH5-KO-AwW" customClass="BattleViewController" customModule="TechMon" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="hH5-KO-AwW" customClass="BattleViewController" customModule="TechMon" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lyf-GI-htH">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bgimage.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="obM-Q6-Lr9">
+                                <rect key="frame" x="0.0" y="-53" width="414" height="949"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="battlebg.png" translatesAutoresizingMaskIntoConstraints="NO" id="YoX-eZ-GeT">
                                 <rect key="frame" x="0.0" y="61" width="414" height="636"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="gold_button.png" translatesAutoresizingMaskIntoConstraints="NO" id="70S-zs-dBQ">
                                 <rect key="frame" x="20" y="722" width="82" height="84"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TfC-aP-Cdj">
-                                <rect key="frame" x="236" y="547" width="128" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BTs-ug-Nqh">
-                                <rect key="frame" x="20" y="79" width="128" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TI1-2f-0uk">
@@ -192,41 +192,80 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Evb-WZ-2SJ" userLabel="ためる">
-                                <rect key="frame" x="335" y="749" width="46" height="30"/>
+                                <rect key="frame" x="326" y="751" width="51" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="ためる"/>
+                                <fontDescription key="fontDescription" name="MisakiGothic" family="MisakiGothic" pointSize="17"/>
+                                <state key="normal" title="ためる">
+                                    <color key="titleColor" red="0.066666666669999999" green="0.066666666669999999" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="tameruAction" destination="hH5-KO-AwW" eventType="touchUpInside" id="CNm-mm-q9R"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X1D-vV-pKa" userLabel="こうげき">
-                                <rect key="frame" x="30" y="749" width="62" height="30"/>
+                                <rect key="frame" x="27" y="751" width="68" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="こうげき"/>
+                                <fontDescription key="fontDescription" name="MisakiGothic" family="MisakiGothic" pointSize="17"/>
+                                <state key="normal" title="こうげき">
+                                    <color key="titleColor" red="0.066666666669999999" green="0.066666666669999999" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="attackAction" destination="hH5-KO-AwW" eventType="touchUpInside" id="2R3-Hb-1w7"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YyR-7G-p5g">
-                                <rect key="frame" x="176" y="749" width="62" height="30"/>
+                                <rect key="frame" x="173" y="751" width="68" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="ファイア"/>
+                                <fontDescription key="fontDescription" name="MisakiGothic" family="MisakiGothic" pointSize="17"/>
+                                <state key="normal" title="ファイア">
+                                    <color key="titleColor" red="0.066666666669999999" green="0.066666666669999999" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="fireAction" destination="hH5-KO-AwW" eventType="touchUpInside" id="cr2-pI-vYM"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0 / 100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DlZ-oQ-P7l">
-                                <rect key="frame" x="100" y="571" width="78" height="79"/>
+                                <rect key="frame" x="106" y="593" width="78" height="43"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="MisakiGothic" family="MisakiGothic" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="monster.png" translatesAutoresizingMaskIntoConstraints="NO" id="DdR-vj-Nn1">
+                                <rect key="frame" x="20" y="111" width="129" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="yusya.png" translatesAutoresizingMaskIntoConstraints="NO" id="TfC-aP-Cdj">
+                                <rect key="frame" x="211" y="508" width="128" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="kuS-dv-nSd"/>
                     </view>
+                    <connections>
+                        <outlet property="enemyHPLabel" destination="Mzy-GQ-elm" id="kAu-RI-yb9"/>
+                        <outlet property="enemyImageView" destination="DdR-vj-Nn1" id="7pz-OU-bc6"/>
+                        <outlet property="enemyMPLabel" destination="tkc-bF-mNz" id="WIz-1X-YBQ"/>
+                        <outlet property="enemyNameLabel" destination="TI1-2f-0uk" id="Uzi-Va-9GK"/>
+                        <outlet property="playerHPLabel" destination="cFH-p0-JXQ" id="yGj-b6-MUI"/>
+                        <outlet property="playerImageView" destination="TfC-aP-Cdj" id="PqS-qF-0u9"/>
+                        <outlet property="playerMPLabel" destination="pYh-2e-Evq" id="8xE-HW-es5"/>
+                        <outlet property="playerNameLabel" destination="imy-pW-swi" id="vAL-H4-ZxL"/>
+                        <outlet property="playerTPLabel" destination="DlZ-oQ-P7l" id="9O6-aU-ZR1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z2H-nb-Cu3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1109" y="-115"/>
+            <point key="canvasLocation" x="1108.6956521739132" y="-115.17857142857142"/>
         </scene>
     </scenes>
     <resources>
         <image name="battlebg.png" width="320" height="160"/>
+        <image name="bgimage.jpg" width="1280" height="960"/>
         <image name="gold_button.png" width="800" height="245"/>
         <image name="lobby.png" width="500" height="400"/>
+        <image name="monster.png" width="88" height="120"/>
         <image name="yusya.png" width="56" height="56"/>
     </resources>
 </document>
